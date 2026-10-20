@@ -1,0 +1,164 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: Bounded public AI agent documentation discovery crawler
+Parameters:
+  SeedUrls:
+    Type: String
+    Default: '[]'
+    Description: JSON array of authorized public source URLs
+  AllowedDomains:
+    Type: String
+    Default: '[]'
+    Description: JSON array of exact hostnames; defaults to seed hostnames
+  UrlPrefixes:
+    Type: String
+    Default: '[]'
+  DeniedPrefixes:
+    Type: String
+    Default: '[]'
+  MaxPages:
+    Type: Number
+    Default: 30
+    MinValue: 1
+    MaxValue: 500
+  MaxDepth:
+    Type: Number
+    Default: 2
+    MinValue: 0
+    MaxValue: 20
+  RequestTimeout:
+    Type: Number
+    Default: 10
+    MinValue: 1
+    MaxValue: 30
+  DelaySeconds:
+    Type: Number
+    Default: 1
+    MinValue: 1
+    MaxValue: 120
+  UserAgent:
+    Type: String
+    Default: AgentDiscoveryCrawler/0.1
+  ScheduleEnabled:
+    Type: String
+    Default: 'false'
+    AllowedValues: ['true', 'false']
+  ScheduleExpression:
+    Type: String
+    Default: rate(1 day)
+Conditions:
+  EnableSchedule: !Equals [!Ref ScheduleEnabled, 'true']
+Resources:
+  ResultsBucket:
+    Type: AWS::S3::Bucket
+    DeletionPolicy: Retain
+    UpdateReplacePolicy: Retain
+    Properties:
+      PublicAccessBlockConfiguration:
+        BlockPublicAcls: true
+        BlockPublicPolicy: true
+        IgnorePublicAcls: true
+        RestrictPublicBuckets: true
+      BucketEncryption:
+        ServerSideEncryptionConfiguration:
+          - ServerSideEncryptionByDefault:
+              SSEAlgorithm: AES256
+      VersioningConfiguration:
+        Status: Enabled
+  ResultsBucketPolicy:
+    Type: AWS::S3::BucketPolicy
+    Properties:
+      Bucket: !Ref ResultsBucket
+      PolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          - Effect: Deny
+            Principal: '*'
+            Action: 's3:*'
+            Resource:
+              - !GetAtt ResultsBucket.Arn
+              - !Sub '${ResultsBucket.Arn}/*'
+            Condition:
+              Bool:
+                aws:SecureTransport: 'false'
+  CrawlerLogGroup:
+    Type: AWS::Logs::LogGroup
+    Properties:
+      RetentionInDays: 14
+  CrawlerRole:
+    Type: AWS::IAM::Role
+    Properties:
+      AssumeRolePolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service: lambda.amazonaws.com
+            Action: sts:AssumeRole
+      Policies:
+        - PolicyName: WriteCrawlArtifactsAndLogs
+          PolicyDocument:
+            Version: '2012-10-17'
+            Statement:
+              - Effect: Allow
+                Action: s3:PutObject
+                Resource: !Sub '${ResultsBucket.Arn}/runs/*'
+              - Effect: Allow
+                Action: [logs:CreateLogStream, logs:PutLogEvents]
+                Resource: !GetAtt CrawlerLogGroup.Arn
+  CrawlerFunction:
+    Type: AWS::Serverless::Function
+    Metadata:
+      BuildMethod: makefile
+    Properties:
+      CodeUri: .
+      Handler: agent_crawler.lambda_handler.handler
+      Runtime: python3.12
+      Architectures: [x86_64]
+      Role: !GetAtt CrawlerRole.Arn
+      Timeout: 300
+      MemorySize: 512
+      ReservedConcurrentExecutions: 1
+      LoggingConfig:
+        LogGroup: !Ref CrawlerLogGroup
+      Environment:
+        Variables:
+          SEED_URLS: !Ref SeedUrls
+          ALLOWED_DOMAINS: !Ref AllowedDomains
+          URL_PREFIXES: !Ref UrlPrefixes
+          DENIED_PREFIXES: !Ref DeniedPrefixes
+          MAX_PAGES: !Ref MaxPages
+          MAX_DEPTH: !Ref MaxDepth
+          REQUEST_TIMEOUT: !Ref RequestTimeout
+          DELAY_SECONDS: !Ref DelaySeconds
+          USER_AGENT: !Ref UserAgent
+          MAX_RUNTIME_SECONDS: '240'
+          RESULTS_BUCKET: !Ref ResultsBucket
+      Events:
+        ScheduledCrawl:
+          Type: Schedule
+          Properties:
+            Schedule: !Ref ScheduleExpression
+            Enabled: !If [EnableSchedule, true, false]
+  CrawlerErrorsAlarm:
+    Type: AWS::CloudWatch::Alarm
+    Properties:
+      AlarmDescription: Lambda execution errors; attach an operator SNS action if desired
+      Namespace: AWS/Lambda
+      MetricName: Errors
+      Dimensions:
+        - Name: FunctionName
+          Value: !Ref CrawlerFunction
+      Statistic: Sum
+      Period: 300
+      EvaluationPeriods: 1
+      Threshold: 1
+      ComparisonOperator: GreaterThanOrEqualToThreshold
+      TreatMissingData: notBreaching
+Outputs:
+  FunctionName:
+    Value: !Ref CrawlerFunction
+  ResultsBucketName:
+    Value: !Ref ResultsBucket
+  LogGroupName:
+    Value: !Ref CrawlerLogGroup

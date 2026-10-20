@@ -1,0 +1,3 @@
+* text=auto eol=lf
+# Preserve exact CSV bytes so published evidence hashes remain valid after cloning.
+*.csv -text whitespace=cr-at-eol

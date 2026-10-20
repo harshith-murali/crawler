@@ -1,0 +1,25 @@
+{
+  "seed_urls": [
+    "https://newsroom.bankofamerica.com/content/newsroom/press-releases/2025/08/a-decade-of-ai-innovation--bofa-s-virtual-assistant-erica-surpas.html",
+    "https://sites.wf.com/fargo/",
+    "https://www.citigroup.com/global/news/press-release/2025/citi-expands-generative-ai-capabilities-to-australia-and-new-zealand",
+    "https://www.citigroup.com/global/news/perspectives/2025/citi-ai-enters-80-markets-and-counting",
+    "https://www.dbs.com/newsroom/DBS_empowers_its_Customer_Service_Officers_with_Gen_AI_powered_virtual_assistant_to_reduce_toil_and_enhance_customer_experience",
+    "https://www.dbs.com/india/newsroom_media/what-ai-at-scale-looks-like-inside-dbs-bank-india.page",
+    "https://www.morganstanley.com/press-releases/ai-at-morgan-stanley-debrief-launch",
+    "https://www.natwestgroup.com/news-and-insights/news-room/press-releases/ai-and-data/2025/mar/natwest-open-ai-collaborate-to-accelerate-cutting-edge-ai-transf.html",
+    "https://www.ocbc.com/group/investors/annual-reports/2024-annual-report/creating-value-through-ai.page",
+    "https://rbcborealis.com/applications/aiden/",
+    "https://www.capitalone.com/about/newsroom/capital-one-auto-wins-two-2026-big-innovation-awards/",
+    "https://www.lemonade.com/blog/secret-behind-lemonades-instant-insurance/",
+    "https://press.bunq.com/258930-bunq-launches-smarter-more-powerful-upgrade-to-genai-financial-assistant/"
+  ],
+  "max_pages": 20,
+  "max_depth": 0,
+  "request_timeout": 15,
+  "delay_seconds": 2,
+  "retries": 0,
+  "max_runtime_seconds": 500,
+  "output_file": "output/research/agent_inventory.csv",
+  "llm_provider": "none"
+}

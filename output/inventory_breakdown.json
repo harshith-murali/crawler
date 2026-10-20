@@ -1,0 +1,26 @@
+{
+  "total_records": 20,
+  "financial_services_records": 15,
+  "financial_services_organizations": [
+    "Bank of America",
+    "Capital One Auto",
+    "Citi",
+    "DBS",
+    "NatWest",
+    "OCBC",
+    "RBC Capital Markets",
+    "Wells Fargo",
+    "bunq"
+  ],
+  "financial_services_status_counts": {
+    "documented_deployed": 12,
+    "documented_use_case": 1,
+    "documented_experimental": 2
+  },
+  "overall_status_counts": {
+    "documented_deployed": 13,
+    "documented_use_case": 5,
+    "documented_experimental": 2
+  },
+  "caution": "Statuses describe dated public documentation; not independent current-deployment verification."
+}

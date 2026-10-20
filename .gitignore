@@ -1,0 +1,15 @@
+.venv/
+.env
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+.aws-sam/
+*.egg-info/
+output/*
+!output/.gitkeep
+# Publish verified CSV deliverables and their audit summaries, not full source snapshots.
+!output/*.csv
+!output/*.summary.json
+!output/agent_inventory.evidence_check.json
+!output/inventory_breakdown.json

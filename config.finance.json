@@ -1,0 +1,48 @@
+{
+  "seed_urls": [
+    "https://newsroom.bankofamerica.com/content/newsroom/press-releases/2025/08/a-decade-of-ai-innovation--bofa-s-virtual-assistant-erica-surpas.html",
+    "https://newsroom.wf.com/news-releases/news-details/2026/Wells-Fargo-Reaches-Major-Digital-Milestones/default.aspx",
+    "https://newsroom.wf.com/news-releases/news-details/2026/Wells-Fargo-introduces-AI-Teammate-bringing--AI-powered-support-to-the-advisor-experience/default.aspx",
+    "https://www.citigroup.com/global/news/press-release/2025/citi-expands-generative-ai-capabilities-to-australia-and-new-zealand",
+    "https://www.dbs.com/newsroom/DBS_empowers_its_Customer_Service_Officers_with_Gen_AI_powered_virtual_assistant_to_reduce_toil_and_enhance_customer_experience",
+    "https://www.ocbc.com/group/investors/annual-reports/2024-annual-report/creating-value-through-ai.page",
+    "https://www.natwestgroup.com/news-and-insights/news-room/press-releases/ai-and-data/2025/mar/natwest-open-ai-collaborate-to-accelerate-cutting-edge-ai-transf.html",
+    "https://rbcborealis.com/applications/aiden/",
+    "https://www.capitalone.com/about/newsroom/capital-one-auto-wins-two-2026-big-innovation-awards/",
+    "https://press.bunq.com/258930-bunq-launches-smarter-more-powerful-upgrade-to-genai-financial-assistant/",
+    "https://www.natwestgroup.com/who-we-are/about-natwest-group/tech-data-and-AI/natwest-ai-adoption-report/how-we-use-AI-for-the-future-of-customer-relationships.html"
+  ],
+  "allowed_domains": [
+    "newsroom.bankofamerica.com",
+    "newsroom.wf.com",
+    "press.bunq.com",
+    "rbcborealis.com",
+    "www.capitalone.com",
+    "www.citigroup.com",
+    "www.dbs.com",
+    "www.natwestgroup.com",
+    "www.ocbc.com"
+  ],
+  "url_prefixes": [
+    "https://newsroom.bankofamerica.com/content/newsroom/press-releases/2025/08/a-decade-of-ai-innovation--bofa-s-virtual-assistant-erica-surpas.html",
+    "https://newsroom.wf.com/news-releases/news-details/2026/Wells-Fargo-Reaches-Major-Digital-Milestones/default.aspx",
+    "https://newsroom.wf.com/news-releases/news-details/2026/Wells-Fargo-introduces-AI-Teammate-bringing--AI-powered-support-to-the-advisor-experience/default.aspx",
+    "https://www.citigroup.com/global/news/press-release/2025/citi-expands-generative-ai-capabilities-to-australia-and-new-zealand",
+    "https://www.dbs.com/newsroom/DBS_empowers_its_Customer_Service_Officers_with_Gen_AI_powered_virtual_assistant_to_reduce_toil_and_enhance_customer_experience",
+    "https://www.ocbc.com/group/investors/annual-reports/2024-annual-report/creating-value-through-ai.page",
+    "https://www.natwestgroup.com/news-and-insights/news-room/press-releases/ai-and-data/2025/mar/natwest-open-ai-collaborate-to-accelerate-cutting-edge-ai-transf.html",
+    "https://rbcborealis.com/applications/aiden/",
+    "https://www.capitalone.com/about/newsroom/capital-one-auto-wins-two-2026-big-innovation-awards/",
+    "https://press.bunq.com/258930-bunq-launches-smarter-more-powerful-upgrade-to-genai-financial-assistant/",
+    "https://www.natwestgroup.com/who-we-are/about-natwest-group/tech-data-and-AI/natwest-ai-adoption-report/how-we-use-AI-for-the-future-of-customer-relationships.html"
+  ],
+  "max_pages": 20,
+  "max_depth": 1,
+  "max_discovered": 60,
+  "request_timeout": 20,
+  "delay_seconds": 2,
+  "retries": 1,
+  "max_runtime_seconds": 500,
+  "output_file": "output/financial_services_inventory.csv",
+  "llm_provider": "none"
+}

@@ -1,0 +1,11 @@
+{
+  "seed_urls": [],
+  "allowed_domains": [],
+  "url_prefixes": [],
+  "denied_prefixes": [],
+  "max_pages": 30,
+  "max_depth": 2,
+  "request_timeout": 10,
+  "delay_seconds": 1,
+  "output_file": "output/agent_inventory.csv"
+}

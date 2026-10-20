@@ -1,0 +1,189 @@
+{
+  "checked_at": "2026-10-20T07:16:56.042886+00:00",
+  "records_checked": 20,
+  "inventory_sha256": "db01b2dfbb3c1ee1e73f2f91071f2ccfe49df650b412aa2c41ba7e5fe0161d99",
+  "all_checks_passed": true,
+  "meaning": "Source text matching, not independent deployment verification",
+  "records": [
+    {
+      "agent_name": "Erica",
+      "organization": "Bank of America",
+      "source_url": "https://newsroom.bankofamerica.com/content/newsroom/press-releases/2025/08/a-decade-of-ai-innovation--bofa-s-virtual-assistant-erica-surpas.html",
+      "evidence_matches_saved_source": true,
+      "snapshot_hash_matches": true,
+      "record_and_status_reproduced_from_source": true,
+      "evidence_status": "documented_deployed"
+    },
+    {
+      "agent_name": "Erica for Employees",
+      "organization": "Bank of America",
+      "source_url": "https://newsroom.bankofamerica.com/content/newsroom/press-releases/2025/08/a-decade-of-ai-innovation--bofa-s-virtual-assistant-erica-surpas.html",
+      "evidence_matches_saved_source": true,
+      "snapshot_hash_matches": true,
+      "record_and_status_reproduced_from_source": true,
+      "evidence_status": "documented_deployed"
+    },
+    {
+      "agent_name": "Fargo",
+      "organization": "Wells Fargo",
+      "source_url": "https://newsroom.wf.com/news-releases/news-details/2026/Wells-Fargo-Reaches-Major-Digital-Milestones/default.aspx",
+      "evidence_matches_saved_source": true,
+      "snapshot_hash_matches": true,
+      "record_and_status_reproduced_from_source": true,
+      "evidence_status": "documented_deployed"
+    },
+    {
+      "agent_name": "AI Teammate",
+      "organization": "Wells Fargo",
+      "source_url": "https://newsroom.wf.com/news-releases/news-details/2026/Wells-Fargo-introduces-AI-Teammate-bringing--AI-powered-support-to-the-advisor-experience/default.aspx",
+      "evidence_matches_saved_source": true,
+      "snapshot_hash_matches": true,
+      "record_and_status_reproduced_from_source": true,
+      "evidence_status": "documented_use_case"
+    },
+    {
+      "agent_name": "Citi Assist",
+      "organization": "Citi",
+      "source_url": "https://www.citigroup.com/global/news/press-release/2025/citi-expands-generative-ai-capabilities-to-australia-and-new-zealand",
+      "evidence_matches_saved_source": true,
+      "snapshot_hash_matches": true,
+      "record_and_status_reproduced_from_source": true,
+      "evidence_status": "documented_deployed"
+    },
+    {
+      "agent_name": "DBS-GPT",
+      "organization": "DBS",
+      "source_url": "https://www.dbs.com/newsroom/DBS_empowers_its_Customer_Service_Officers_with_Gen_AI_powered_virtual_assistant_to_reduce_toil_and_enhance_customer_experience",
+      "evidence_matches_saved_source": true,
+      "snapshot_hash_matches": true,
+      "record_and_status_reproduced_from_source": true,
+      "evidence_status": "documented_deployed"
+    },
+    {
+      "agent_name": "CSO Assistant",
+      "organization": "DBS",
+      "source_url": "https://www.dbs.com/newsroom/DBS_empowers_its_Customer_Service_Officers_with_Gen_AI_powered_virtual_assistant_to_reduce_toil_and_enhance_customer_experience",
+      "evidence_matches_saved_source": true,
+      "snapshot_hash_matches": true,
+      "record_and_status_reproduced_from_source": true,
+      "evidence_status": "documented_experimental"
+    },
+    {
+      "agent_name": "OCBC GPT",
+      "organization": "OCBC",
+      "source_url": "https://www.ocbc.com/group/investors/annual-reports/2024-annual-report/creating-value-through-ai.page",
+      "evidence_matches_saved_source": true,
+      "snapshot_hash_matches": true,
+      "record_and_status_reproduced_from_source": true,
+      "evidence_status": "documented_deployed"
+    },
+    {
+      "agent_name": "OCBC Buddy",
+      "organization": "OCBC",
+      "source_url": "https://www.ocbc.com/group/investors/annual-reports/2024-annual-report/creating-value-through-ai.page",
+      "evidence_matches_saved_source": true,
+      "snapshot_hash_matches": true,
+      "record_and_status_reproduced_from_source": true,
+      "evidence_status": "documented_deployed"
+    },
+    {
+      "agent_name": "Ask Archie+",
+      "organization": "NatWest",
+      "source_url": "https://www.natwestgroup.com/news-and-insights/news-room/press-releases/ai-and-data/2025/mar/natwest-open-ai-collaborate-to-accelerate-cutting-edge-ai-transf.html",
+      "evidence_matches_saved_source": true,
+      "snapshot_hash_matches": true,
+      "record_and_status_reproduced_from_source": true,
+      "evidence_status": "documented_deployed"
+    },
+    {
+      "agent_name": "Aiden",
+      "organization": "RBC Capital Markets",
+      "source_url": "https://rbcborealis.com/applications/aiden/",
+      "evidence_matches_saved_source": true,
+      "snapshot_hash_matches": true,
+      "record_and_status_reproduced_from_source": true,
+      "evidence_status": "documented_deployed"
+    },
+    {
+      "agent_name": "Chat Concierge",
+      "organization": "Capital One Auto",
+      "source_url": "https://www.capitalone.com/about/newsroom/capital-one-auto-wins-two-2026-big-innovation-awards/",
+      "evidence_matches_saved_source": true,
+      "snapshot_hash_matches": true,
+      "record_and_status_reproduced_from_source": true,
+      "evidence_status": "documented_deployed"
+    },
+    {
+      "agent_name": "Finn",
+      "organization": "bunq",
+      "source_url": "https://press.bunq.com/258930-bunq-launches-smarter-more-powerful-upgrade-to-genai-financial-assistant/",
+      "evidence_matches_saved_source": true,
+      "snapshot_hash_matches": true,
+      "record_and_status_reproduced_from_source": true,
+      "evidence_status": "documented_deployed"
+    },
+    {
+      "agent_name": "Fraud Triage Agent",
+      "organization": "NatWest",
+      "source_url": "https://www.natwestgroup.com/who-we-are/about-natwest-group/tech-data-and-AI/natwest-ai-adoption-report/how-we-use-AI-for-the-future-of-customer-relationships.html",
+      "evidence_matches_saved_source": true,
+      "snapshot_hash_matches": true,
+      "record_and_status_reproduced_from_source": true,
+      "evidence_status": "documented_deployed"
+    },
+    {
+      "agent_name": "Cora",
+      "organization": "NatWest",
+      "source_url": "https://www.natwestgroup.com/who-we-are/about-natwest-group/tech-data-and-AI/natwest-ai-adoption-report/how-we-use-AI-for-the-future-of-customer-relationships.html",
+      "evidence_matches_saved_source": true,
+      "snapshot_hash_matches": true,
+      "record_and_status_reproduced_from_source": true,
+      "evidence_status": "documented_experimental"
+    },
+    {
+      "agent_name": "Researcher",
+      "organization": "Microsoft",
+      "source_url": "https://adoption.microsoft.com/en-us/ai-agents/agents-in-microsoft-365/",
+      "evidence_matches_saved_source": true,
+      "snapshot_hash_matches": true,
+      "record_and_status_reproduced_from_source": true,
+      "evidence_status": "documented_use_case"
+    },
+    {
+      "agent_name": "Analyst",
+      "organization": "Microsoft",
+      "source_url": "https://adoption.microsoft.com/en-us/ai-agents/agents-in-microsoft-365/",
+      "evidence_matches_saved_source": true,
+      "snapshot_hash_matches": true,
+      "record_and_status_reproduced_from_source": true,
+      "evidence_status": "documented_use_case"
+    },
+    {
+      "agent_name": "Agentforce Sales Coach",
+      "organization": "Salesforce",
+      "source_url": "https://trailhead.salesforce.com/content/learn/modules/agentforce-for-sales-coaching-setup-and-customization/get-to-know-agentforce-sales-coach",
+      "evidence_matches_saved_source": true,
+      "snapshot_hash_matches": true,
+      "record_and_status_reproduced_from_source": true,
+      "evidence_status": "documented_use_case"
+    },
+    {
+      "agent_name": "IBM watsonx\u2122 Code Assistant",
+      "organization": "IBM",
+      "source_url": "https://www.ibm.com/solutions/ai-assistants",
+      "evidence_matches_saved_source": true,
+      "snapshot_hash_matches": true,
+      "record_and_status_reproduced_from_source": true,
+      "evidence_status": "documented_use_case"
+    },
+    {
+      "agent_name": "Arvee",
+      "organization": "Camping World",
+      "source_url": "https://www.ibm.com/case-studies/camping-world",
+      "evidence_matches_saved_source": true,
+      "snapshot_hash_matches": true,
+      "record_and_status_reproduced_from_source": true,
+      "evidence_status": "documented_deployed"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "started_at": "2026-10-20T06:59:49.302327+00:00",
+  "pages_discovered": 15,
+  "pages_attempted": 15,
+  "pages_fetched": 15,
+  "pages_failed": 0,
+  "pages_skipped": 0,
+  "duplicate_pages": 0,
+  "records_extracted": 20,
+  "candidates_extracted": 20,
+  "stop_reason": "queue_exhausted",
+  "errors": [],
+  "discovery_limit_reached": false,
+  "finished_at": "2026-10-20T07:00:49.268247+00:00",
+  "output_file": "output/agent_inventory.csv"
+}

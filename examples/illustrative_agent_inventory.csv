@@ -1,0 +1,5 @@
+organization,task_or_purpose,agent_name,department_or_business_function,source_url,supporting_evidence,evidence_status
+Illustrative Bank,Answer customer questions,Support Agent,Customer service,https://illustrative.example/agents,Illustrative Bank Support Agent Answer customer questions Customer service Deployed,documented_deployed
+Illustrative Bank,Review suspicious transactions,Risk Agent,Risk,https://illustrative.example/agents,Illustrative Bank Risk Agent Review suspicious transactions Risk Pilot,documented_experimental
+Illustrative Bank,summarize public reports,Research Assistant,,https://illustrative.example/agents,Illustrative Bank uses its Research Assistant to summarize public reports.,documented_deployed
+Illustrative Bank,review expense claims,Audit Agent,,https://illustrative.example/agents,Illustrative Bank plans to deploy its Audit Agent to review expense claims.,documented_proposed

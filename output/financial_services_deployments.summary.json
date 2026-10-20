@@ -1,0 +1,19 @@
+{
+  "derived_from": "output/agent_inventory.csv",
+  "not_a_separate_crawl": true,
+  "records_extracted": 12,
+  "organizations": [
+    "Bank of America",
+    "Capital One Auto",
+    "Citi",
+    "DBS",
+    "NatWest",
+    "OCBC",
+    "RBC Capital Markets",
+    "Wells Fargo",
+    "bunq"
+  ],
+  "evidence_status_counts": {
+    "documented_deployed": 12
+  }
+}
